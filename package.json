@@ -1,0 +1,17 @@
+{
+  "name": "hw16_star",
+  "version": "1.0.0",
+  "description": "\\*\\*\\*Задание под звездочкой (тренировка регулярных выражений)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ElenLen",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0"
+  }
+}

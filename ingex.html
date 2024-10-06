@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <title>Калькулятор</title>
+</head>
+
+<body>
+  <main class="main">
+    <h1>Калькулятор</h1>
+    <form id="Auto" name="myForm" class="main__form">
+      <!-- Выпадающий список (select) с маркой автомобиля: Reno, Opel, Mazda, Jaguar -->
+      <label for="markAuto" class="form__label">Марка автомобиля</label>
+      <select id="markAuto" name="markAuto">
+        <option value="0">Не выбрано</option>
+        <option value="1">Reno</option>
+        <option value="2">Opel</option>
+        <option value="3">Mazda</option>
+        <option value="4">Jaguar</option>
+      </select>
+
+      <!-- Выпадающий список (select) с моделью автомобиля, зависящей от выбранной марки -->
+      <label for="modAuto" class="form__label">Модель автомобиля</label>
+      <select id="modAuto" disabled>
+      </select>
+
+      <!-- Чекбокс или радиокнопка для выбора типа топлива: бензин, дизель, газ, электричество -->
+      <div class="radio-block">
+        <input type="radio" name="fuel" id="petrol" class="input-field" value="1000" checked required>
+        <label for="petrol" class="form__label">бензин</label>
+
+        <input type="radio" name="fuel" id="diesel" class="input-field" value="2000" required>
+        <label for="diesel" class="form__label">Дизель</label>
+
+        <input type="radio" name="fuel" id="gas" class="input-field" value="3000" required>
+        <label for="gas" class="form__label">Газ</label>
+
+        <input type="radio" name="fuel" id="electricity" class="input-field" value="4000" required>
+        <label for="electricity" class="form__label">Электричество</label>
+      </div>
+
+      <!-- Поле ввода (input) для ввода объема двигателя (от 1.1 литра до 3.5 литров) -->
+      <label for="typeFuel" class="form__label">Объем топлива</label>
+      <input type="number" step="0.1" name="typeFuel" id="typeFuel" class="input-field" placeholder="1.1" min="1.1"
+        max="3.5" required>
+
+      <!-- Чекбокс или радиокнопка для выбора состояния автомобиля: новый, подержанный -->
+      <div id="statuAuto" class="radio-block">
+        <input type="radio" name="status" id="new" class="input-field" value="100" checked required>
+        <label for="new" class="form__label">новый</label>
+
+        <input type="radio" name="status" id="old" class="input-field" value="0" required>
+        <label for="old" class="form__label">подержанный</label>
+      </div>
+
+      <!-- Если автомобиль подержанный, появляется чекбокс или радиокнопка для выбора количества владельцев: 1-2 владельца, более 3-х владельцев -->
+      <label for="owner" class="form__label">Владельцы автомобиля</label>
+      <select id="owner" disabled>
+      </select>
+
+      <!-- Чекбокс или радиокнопка для выбора способа оплаты: картой, наличными, счет на юридическое лицо -->
+      <div id="pay">
+        <input type="radio" name="statusPay" id="card" class="input-field" value="30" checked required>
+        <label for="card" class="form__label">Карта</label>
+
+        <input type="radio" name="statusPay" id="cash" class="input-field" value="10" required>
+        <label for="cash" class="form__label">Наличные</label>
+
+        <input type="radio" name="statusPay" id="account" class="input-field" value="20" required>
+        <label for="account" class="form__label">Счет ЮЛ</label>
+      </div>
+      <button type="submit">Сбросить</button>
+    </form>
+    <!-- Итого: -->
+    <div id='container'></div>
+  </main>
+  <script src="./assets/script/script.js"></script>
+</body>
+
+</html>

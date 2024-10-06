@@ -1,0 +1,21 @@
+.main__form {
+  display: inline-grid;
+  border: 1px dotted #000000;
+  background: #fff;
+  padding: 20px;
+  background-color: lightblue;
+}
+
+#container {
+  margin-left: 10px;
+  margin-top: 0.5rem;
+  font-size: 25px;
+  font-family: Rubik, sans-serif;
+  color: #000;
+}
+
+button {
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
